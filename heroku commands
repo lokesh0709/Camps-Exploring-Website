@@ -1,0 +1,30 @@
+Login: heroku login
+Create APP: heroku create
+To check git where to push or fetch: git remote -v
+
+deploying files on heroku: 
+1) git add .
+2) git commit -m "ready to deploy" 
+3) git push heroku master 
+4) After this it will give error 
+5) to solve this add : "start" : "node app.js" under scripts object in package.json
+6) set port
+
+If changes are made then follow this process to make changes on heroku
+1) git add .
+2) git commit -m "ready to deploy" 
+3) git push heroku master 
+
+After pushing again it will give error of env
+1) set env through gui 
+2) Or through command: heroku config:set variablename=value
+
+After setting env there will be error of IP address not allowed of heroku 
+1) go on mongo site and allow all ips
+
+After this do: heroku restart
+
+LOgs: heroku logs --tail
+
+Remove previous git: git remote rm heroku
+add current git: git remote add heroku "url"
